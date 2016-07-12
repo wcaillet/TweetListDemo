@@ -8,13 +8,25 @@ const usersSchema = new Schema({
     password: String,
 })
 
-const postsSchema = new Schema({
-  title: String, 
-  body: String,
-  user: Object
-})
+// const postsSchema = new Schema({
+//   title: String, 
+//   body: String,
+//   user: Object
+// })
+
+//Schema for our tweets
+const tweetSchema = new Schema({
+		content: String,
+		userHandle: String
+	},
+
+	{
+		timestamps: true
+	} //If set to true then mongo will put timestamp in for you
+)
 
 module.exports = {
-  User: createModel('User', usersSchema),
-  Post: createModel('Post', postsSchema)
+  // User: createModel('User', usersSchema),
+  // Post: createModel('Post', postsSchema)
+  Tweet: createModel('Tweet', tweetSchema)
 }

@@ -55,7 +55,7 @@ appAuthentication(User)
 // =========
 // ROUTERS
 // =========
-
+// Any routes that match, we will use the given router!
 app.use( '/', indexRouter )
 app.use( '/auth', authRouter )
 app.use( '/api', apiRouter )
